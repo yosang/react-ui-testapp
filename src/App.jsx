@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Navbar sticky={true} style={{ height: "70px"} } border="bottom" >
+      <Navbar sticky={true} style={{minHeight: "70px"}}>
           <p>Logo</p>
         <NavItems>
           <NavLink tag={"a"} href="/" >Home</NavLink>
@@ -16,6 +16,16 @@ function App() {
           <NavLink tag={Link} to="/contact">Contact</NavLink>
           <Divider direction="vertical"/>
           <MenuIcon />
+        </NavItems>
+      </Navbar>
+      <Navbar sticky={true} style={{ top: "70px"}} order="bottom">
+        <NavItems>
+          <NavLink>Products</NavLink>
+          <NavLink>Brands</NavLink>
+          <NavLink>Campaigns</NavLink>
+        </NavItems>
+        <NavItems>
+          <NavLink>Velg butikk</NavLink>
         </NavItems>
       </Navbar>
       <Container style={{ width: "90%", margin: "auto"}} centered={true}>
