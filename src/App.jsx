@@ -35,7 +35,7 @@ function App() {
           <NavLink>Campaigns</NavLink>
         </NavItems>
         <NavItems>
-          <NavLink tag={Link} to="/customerservice" >Kundeservice</NavLink>
+          <NavLink tag={Link} to="/customerservice" >Customer Service</NavLink>
         </NavItems>
       </Navbar>
 
