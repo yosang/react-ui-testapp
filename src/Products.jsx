@@ -29,20 +29,41 @@ export default function App () {
             description: "Ultra 3.1 Lime",
             price: "2700",
             discount: "25"
+        },
+        { 
+            image:"https://www.fjellsport.no/assets/blobs/vj-ultra3-lime-1-8d0494608e.jpeg?preset=medium",
+            title:"VJ Sport",
+            description: "Ultra 3.1 Lime",
+            price: "2700",
+            discount: "25"
+        },
+        { 
+            image:"https://www.fjellsport.no/assets/blobs/vj-ultra3-lime-1-8d0494608e.jpeg?preset=medium",
+            title:"VJ Sport",
+            description: "Ultra 3.1 Lime",
+            price: "2700"
+        },
+        { 
+            image:"https://www.fjellsport.no/assets/blobs/vj-ultra3-lime-1-8d0494608e.jpeg?preset=medium",
+            title:"VJ Sport",
+            description: "Ultra 3.1 Lime",
+            price: "2700"
+        },
+        { 
+            image:"https://www.fjellsport.no/assets/blobs/vj-ultra3-lime-1-8d0494608e.jpeg?preset=medium",
+            title:"VJ Sport",
+            description: "Ultra 3.1 Lime",
+            price: "2700"
+        },
+        { 
+            image:"https://www.fjellsport.no/assets/blobs/vj-ultra3-lime-1-8d0494608e.jpeg?preset=medium",
+            title:"VJ Sport",
+            description: "Ultra 3.1 Lime",
+            price: "2700"
         }
     ]
     return (
         <>
-        <Container style={{ width: "80%", margin: "auto"}} centered={true}>
-        <video
-            src="./src/assets/banner-video.mp4"  // or an external URL
-            autoPlay
-            loop       // loops the video continuously
-            muted      // must be muted to autoplay on most browsers
-            playsInline // ensures autoplay works on mobile Safari
-            style={{ width: "100%", height: "450px", objectFit: "cover" }} // responsive
-        />
-        </Container>
         <Container layout="grid" style={{ width: "80%", margin: "auto"}} centered={true}>
             {data.map(p => (
                 <ProductCard discount={p.discount} image={p.image} title={p.title} description={p.description} price={p.price} />

@@ -1,6 +1,8 @@
-import { Container, Divider, Navbar, NavItems, NavLink, MenuIcon, Button, Drawer, Input, Modal } from "@yosang/react-ui"
+import { Container, Divider, Navbar, NavItems, NavLink, Button, Drawer, Input, Modal } from "@yosang/react-ui"
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom"
 import Home from './Home'
+import Products from './Products'
+
 import CustomerService from './CustomerService'
 
 import { useState } from "react"
@@ -13,7 +15,11 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar sticky={true} style={{minHeight: "70px"}}>
+
+        <NavLink asListItem={false} tag={Link} to="/">
           <img style={ { width: "auto", height: "50px", objectFit: "contain"}} src="./src/assets/logo.png" />
+        </NavLink>
+          
         <NavItems>
           <NavLink tag={Link} to="/" >Home</NavLink>
           <Divider direction="vertical"/>
@@ -21,9 +27,10 @@ function App() {
           <NavLink onClick={() => setCartOpen(true)}>Cart</NavLink>
         </NavItems>
       </Navbar>
+
       <Navbar sticky={true} style={{ top: "70px"}} order="bottom">
         <NavItems>
-          <NavLink>Products</NavLink>
+          <NavLink tag={Link} to="/products" >Products</NavLink>
           <NavLink>Brands</NavLink>
           <NavLink>Campaigns</NavLink>
         </NavItems>
@@ -31,15 +38,19 @@ function App() {
           <NavLink tag={Link} to="/customerservice" >Kundeservice</NavLink>
         </NavItems>
       </Navbar>
+
       <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/customerservice" element={<CustomerService />} />
       </Routes>
+
       <Drawer isOpen={cartOpen} onClose={() => setCartOpen(false)} title="Cart">
         <p>Products in cart</p>
         <br />
         <Button onClick={() => setCartOpen(false)}>Checkout</Button>
       </Drawer>
+
       <Modal isOpen={loginOpen} onClose={() => setLoginOpen(false)} title="Login">
         <Container>
           <p>Username</p>
