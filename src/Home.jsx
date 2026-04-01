@@ -1,4 +1,4 @@
-import { ProductCard, Container } from '@yosang/react-ui'
+import { ProductCard, Container, Hero } from '@yosang/react-ui'
 
 export default function App() {
     const data = [
@@ -33,16 +33,11 @@ export default function App() {
     ]
     return (
         <>
-            <Container style={{ width: "80%", margin: "auto" }} centered={true}>
-                <video
-                    src="https://i.imgur.com/5PUkZRJ.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline // ensures autoplay works on mobile Safari
-                    style={{ width: "100%", height: "450px", objectFit: "cover" }} // responsive
-                />
-            </Container>
+            <Hero style={{minHeight: "80vh"}} type='video' src='https://i.imgur.com/5PUkZRJ.mp4'>
+            <p>QUALITY SPORTS WEAR</p>
+            <h1>Now its the time...</h1>
+            <h3>to push your limits!</h3>
+            </Hero>
             <Container layout="grid" style={{ width: "80%", margin: "auto" }} centered={true}>
                 {data.map(p => (
                     <ProductCard discount={p.discount} image={p.image} title={p.title} description={p.description} price={p.price} />

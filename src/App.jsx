@@ -1,7 +1,8 @@
-import { Container, Divider, Navbar, NavItems, NavLink, Button, Drawer, Input, Modal } from "@yosang/react-ui"
+import { Container, Divider, Navbar, NavItems, NavLink, Button, Drawer, Input, Modal, NavLogo, UserIcon, CartIcon } from "@yosang/react-ui"
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom"
 import Home from './Home'
 import Products from './Products'
+import Brands from './Brands'
 
 import CustomerService from './CustomerService'
 
@@ -16,22 +17,20 @@ function App() {
       <BrowserRouter>
         <Navbar style={{ minHeight: "70px" }}>
 
-          <NavLink asListItem={false} tag={Link} to="/">
-            <img style={{ width: "auto", height: "110px", objectFit: "contain" }} src="https://i.imgur.com/UlFsk3d.png" />
-          </NavLink>
-
+          <NavLogo tag={Link} to="/" src="https://i.imgur.com/UlFsk3d.png"></NavLogo>
+          
           <NavItems>
             <NavLink tag={Link} to="/" >Home</NavLink>
             <Divider direction="vertical" />
-            <NavLink onClick={() => setLoginOpen(true)}>Login</NavLink>
-            <NavLink onClick={() => setCartOpen(true)}>Cart</NavLink>
+            <NavLink onClick={() => setLoginOpen(true)}><UserIcon /></NavLink>
+            <NavLink onClick={() => setCartOpen(true)}><CartIcon /></NavLink>
           </NavItems>
         </Navbar>
 
         <Navbar sticky={true} order="bottom">
           <NavItems>
             <NavLink tag={Link} to="/products" >Products</NavLink>
-            <NavLink>Brands</NavLink>
+            <NavLink tag={Link} to="/brands" >Brands</NavLink>
             <NavLink>Campaigns</NavLink>
           </NavItems>
           <NavItems>
@@ -43,6 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/customerservice" element={<CustomerService />} />
+          <Route path="/brands" element={<Brands />} />
         </Routes>
 
         <Drawer isOpen={cartOpen} onClose={() => setCartOpen(false)} title="Cart">
