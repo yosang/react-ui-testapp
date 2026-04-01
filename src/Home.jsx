@@ -33,10 +33,10 @@ export default function App() {
     ]
     return (
         <>
-            <Hero style={{minHeight: "80vh"}} type='video' src='https://i.imgur.com/5PUkZRJ.mp4'>
-            <p>QUALITY SPORTS WEAR</p>
-            <h1>Now its the time...</h1>
-            <h3>to push your limits!</h3>
+            <Hero style={{ minHeight: "80vh" }} type='video' src='https://i.imgur.com/5PUkZRJ.mp4'>
+                <p>QUALITY SPORTS WEAR</p>
+                <h1>Now is the time...</h1>
+                <h3>to push your limits!</h3>
             </Hero>
             <Container layout="grid" style={{ width: "80%", margin: "auto" }} centered={true}>
                 {data.map(p => (
