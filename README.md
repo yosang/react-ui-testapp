@@ -41,7 +41,7 @@ To create a visually appealing portfolio project with real-world functionality (
 
 ### Installation & Usage
 
-1. Clone the project with `https://github.com/yosang/territex-electric-suv.git`
-2. Navigate to the project directory with `territex-electric-suv`
+1. Clone the project with `https://github.com/yosang/vortex-e-commerce.git`
+2. Navigate to the project directory with `vortex-e-commerce`
 3. Installa required packaged with `npm install` 
 4. Run the development environment with `npm run dev`
