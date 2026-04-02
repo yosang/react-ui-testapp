@@ -1,7 +1,7 @@
 # VORTEX – Sportswear E-Commerce Website
 A modern, responsive e-commerce website for VORTEX Sportswear. Built as a portfolio project to demonstrate the capabilities of my custom React UI component library.
 
-**DEMO**: [(Add your live demo link here)](https://vortex-e-commerce-7ldu.vercel.app/)
+**DEMO**: https://vortex-e-commerce-7ldu.vercel.app/
 
 # About
 
