@@ -1,5 +1,5 @@
 # VORTEX Sportswear E-Commerce Frontend
-A modern, responsive e-commerce frontendr. Built as a portfolio project to demonstrate the capabilities of my custom React UI component library.
+A modern, responsive e-commerce frontend. Built as a portfolio project to demonstrate the capabilities of my custom React UI component library.
 
 DEMO: https://vortex-e-commerce-7ldu.vercel.app/
 
